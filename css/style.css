@@ -1,6 +1,9 @@
 :root {
     --light-green: #DADBD4;
     --white: #FFFFFF;
+    --light-grey: #EAEAEA;
+    --text-grey: #B1B1B1;
+    --blue: #8EDAFC;
 }
 
 
@@ -84,6 +87,39 @@ ol {
     }
 }
 
+/******************
+    SIDEBAR 
+******************/
+
+.sidebar {
+    color: var(--text-grey);
+}
+
+.sidebar-nav {
+    background-color: var(--light-grey);
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.user-profile-img {
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+}
+
+.sidebar-nav-tools {
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
+
+/******************
+    CHAT 
+******************/
 
 
 
@@ -101,7 +137,7 @@ ol {
 }
 
 .debug .sidebar {
-    background-color: #8EDAFC;
+    background-color: rebeccapurple;
     height: 100%;
 }
 
