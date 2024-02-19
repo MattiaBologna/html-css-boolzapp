@@ -4,14 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+    <script src="https://kit.fontawesome.com/30a5d231e3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="debug">
     
     <div id="app">
         <div class="app">
-            <div class="sidebar"></div>
-            <div class="chat"></div>
+
+            <!-- SIDEBAR -->
+
+            <div class="sidebar">
+
+                <!-- SIDEBAR - NAV -->
+
+                <nav class="sidebar-nav">
+                    <div class="user-profile-img"></div>
+                    <div class="sidebar-nav-tools">
+                        <div class="nav-status"></div>
+                        <div class="nav-new-chat"></div>
+                        <div class="nav menu"></div>  
+                    </div>
+                </nav>
+
+                <!-- SIDEBAR - POP UP  -->
+
+                <div class="sidebar-pop-up">
+                    <div class="pop-up-img"></div>
+                    <div class="pop-up-text">
+                        <p class="pop-up-title"></p>
+                        <p class="pop-up-subtitle"></p>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR SEARCH BAR -->
+
+                <div class="sidebar-search">
+
+                </div>
+
+                <!-- SIDEBAR - CONVERSATIONS -->
+
+                <div class="sidebar-conversations">
+                    <ul class="chat-list"></ul>
+                </div>
+
+            </div>
+            <div class="chat">
+
+            </div>
         </div>
     </div>
 
