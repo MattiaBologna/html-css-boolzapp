@@ -48,15 +48,42 @@ ol {
     height: 100%;
     width: 100%;
     display: flex;
+    background-color: var(--light-green);
 }
 
 .sidebar {
-    width: 360px;
+    display: none;
 }
 
 .chat {
-    width: calc(100% - 360px);
+    flex-grow: 1;
 }
+
+/******************
+    RESPOSIVE LAYOUT 
+******************/
+
+@media (min-width: 576px) {
+    .sidebar {
+        display: flex;
+        width: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        width: 360px;
+    }
+    .app {
+        width: 80%;
+        height: 95%;
+        margin: auto;
+    }
+    #app {
+        padding-top: 30px;
+    }
+}
+
 
 
 
@@ -75,10 +102,10 @@ ol {
 
 .debug .sidebar {
     background-color: #8EDAFC;
-    min-height: 800px;
+    height: 100%;
 }
 
 .debug .chat {
     background-color: grey;
-    min-height: 800px;
+    height: 100%;
 }
