@@ -1,0 +1,84 @@
+:root {
+    --light-green: #DADBD4;
+    --white: #FFFFFF;
+}
+
+
+/**********************
+    RESET
+***********************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+menu,
+ul,
+ol {
+	list-style: none;
+}
+
+
+/******************
+    LAYOUT 
+******************/
+
+#app {
+    height: 100vh;
+    background-color: var(--light-green);
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.sidebar {
+    width: 360px;
+}
+
+.chat {
+    width: calc(100% - 360px);
+}
+
+
+
+/******************
+    DEBUG 
+******************/
+
+.debug #app {
+    background-color: var(--light-green);
+    height: 100vh;
+}
+
+.debug .app {
+    background-color: var(--white);
+}
+
+.debug .sidebar {
+    background-color: #8EDAFC;
+    min-height: 800px;
+}
+
+.debug .chat {
+    background-color: grey;
+    min-height: 800px;
+}
