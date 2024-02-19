@@ -2,7 +2,9 @@
     --light-green: #DADBD4;
     --white: #FFFFFF;
     --light-grey: #EAEAEA;
-    --text-grey: #B1B1B1;
+    --darker-white: #FAFAFA;
+    --icon-grey: #B1B1B1;
+    --text-dark-grey: #5e5e5e;
     --blue: #8EDAFC;
 }
 
@@ -37,6 +39,11 @@ ol {
 	list-style: none;
 }
 
+body {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
 
 /******************
     LAYOUT 
@@ -68,7 +75,7 @@ ol {
 
 @media (min-width: 576px) {
     .sidebar {
-        display: flex;
+        display: block;
         width: 80px;
     }
 }
@@ -92,7 +99,12 @@ ol {
 ******************/
 
 .sidebar {
-    color: var(--text-grey);
+    background-color: var(--darker-white);
+}
+
+/* Navbar */
+.sidebar-nav {
+    color: var(--icon-grey);
 }
 
 .sidebar-nav {
@@ -112,14 +124,49 @@ ol {
 }
 
 .sidebar-nav-tools {
-    display: flex;
+    display: none;
     gap: 20px;
     font-size: 25px;
 }
 
-/******************
-    CHAT 
-******************/
+/* Pop up */
+.sidebar-pop-up {
+    background-color: var(--blue);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.pop-up-icon {
+    color: var(--blue);
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.pop-up-title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.pop-up-subtitle {
+    color: var(--text-dark-grey);
+    text-decoration: underline;
+}
+
+/***********************
+    RESPONSIVE SIDE BAR 
+***********************/
+
+@media (min-width: 992px) {
+    .sidebar-nav-tools {
+        display: flex;
+    }
+}
+
+
 
 
 
@@ -137,7 +184,6 @@ ol {
 }
 
 .debug .sidebar {
-    background-color: rebeccapurple;
     height: 100%;
 }
 
