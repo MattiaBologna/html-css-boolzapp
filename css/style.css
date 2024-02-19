@@ -133,7 +133,7 @@ body {
 .sidebar-pop-up {
     background-color: var(--blue);
     height: 80px;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 15px;
     padding: 0 15px;
@@ -156,14 +156,33 @@ body {
     text-decoration: underline;
 }
 
+/* Searchbar */
+
+.sidebar-search {
+    display: none;
+    background-color: var(--white);
+    margin: 7px;
+    gap: 25px;
+    align-items: center;
+    color: var(--icon-grey);
+    padding-left: 15px;
+}
+
+.input-search {
+    border: none;
+    flex-grow: 1;
+    line-height: 35px;
+}
+
 /***********************
     RESPONSIVE SIDE BAR 
 ***********************/
 
 @media (min-width: 992px) {
-    .sidebar-nav-tools {
+    .sidebar-nav-tools,
+    .sidebar-pop-up,
+    .sidebar-search {
         display: flex;
-    }
 }
 
 
