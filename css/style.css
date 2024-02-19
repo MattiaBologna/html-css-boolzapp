@@ -157,7 +157,6 @@ body {
 }
 
 /* Searchbar */
-
 .sidebar-search {
     display: none;
     background-color: var(--white);
@@ -173,6 +172,10 @@ body {
     flex-grow: 1;
     line-height: 35px;
 }
+
+/* Conversations */
+
+
 
 /***********************
     RESPONSIVE SIDE BAR 
