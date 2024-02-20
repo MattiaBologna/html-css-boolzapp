@@ -266,6 +266,10 @@ body {
 }
 
 /* Chat Nav */
+.chat-nav {
+    flex-shrink: 1;
+}
+
 .chat-nav .contact-name {
     color: black;
     font-size: 15px;
@@ -383,6 +387,52 @@ body {
 /******************
     FEATURES 
 ******************/
+
+/* MESSAGE DROP DOWN MENU */
+
+.message-menu i {
+    opacity: 0;
+}
+
+.message:hover .message-menu i {
+    opacity: 1;
+    animation: slideInLeft 0.2s ease;
+}
+
+.message-dropdown-menu {
+    position: absolute;
+    display: none;
+    background-color: white;
+    color: black;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.message-dropdown-menu li {
+    padding: 5px 10px;
+}
+
+.message-menu:hover .message-dropdown-menu {
+    display: flex;   
+}
+
+.message-dropdown-menu li:hover {
+    background-color: rgb(228, 228, 228);
+    animation: cardBgSmoothTransition 0.2s ease;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 
 /* Chat background hover */
 
