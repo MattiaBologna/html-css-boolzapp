@@ -380,6 +380,76 @@ body {
 }
 
 
+/******************
+    FEATURES 
+******************/
+
+/* Chat background hover */
+
+.chat-card:hover {
+    background-color: rgb(228, 228, 228);
+    animation: cardBgSmoothTransition 0.2s ease;
+}
+
+@keyframes cardBgSmoothTransition {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: rgb(228, 228, 228);
+    }
+}
+
+/* Icon hover */
+
+.icon:hover {
+    color: var(--text-dark-grey);
+    animation: colorSmoothTransition 0.2s ease;
+}
+
+@keyframes colorSmoothTransition {
+    0% {
+        color: currentColor;
+    }
+    100%{
+        color: var(--text-dark-grey);
+    }
+}
+
+/* Pop up hovers */
+
+.pop-up-icon:hover {
+    background-color: #6ccffd;
+    color: white;
+    animation: blueBgSmoothTransition 0.2s ease;
+}
+
+@keyframes blueBgSmoothTransition {
+    0% {
+        background-color: currentColor;
+    }
+    100% {
+        background-color: #6ccffd;
+        color: white;
+    }
+}
+
+.pop-up-subtitle:hover {
+    font-weight: 700;
+    animation: boldSmooth 0.2s ease;
+}
+
+@keyframes boldSmooth {
+    0% {
+        font-weight: 400;
+    }
+    100% {
+        font-weight: 700;
+    }
+}
+
+
+
 
 
 /******************
