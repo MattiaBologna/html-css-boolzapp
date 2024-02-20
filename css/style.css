@@ -114,6 +114,10 @@ body {
     color: var(--icon-grey);
 }
 
+.sidebar-nav {
+    border-right: 1px solid rgba(128, 128, 128, 0.174);
+}
+
 .user-profile-img {
     height: 50px;
     display: block;
@@ -284,7 +288,8 @@ body {
     display: flex; 
     flex-direction: column;
     gap: 10px;
-    padding: 70px 15% 0px;
+    padding: 70px 25px 0px;
+    overflow: auto;
 }
 
 .message {
@@ -293,16 +298,19 @@ body {
     font-size: 14px;
     display: flex;
     flex-direction: column;
+    max-width: 500px;
 }
 
 .message.mine {
     align-self: flex-end;
     background-color: #DEF8C0;
+    margin-left: 20px;
 }
 
 .message.others {
     align-self: flex-start;
     background-color: white;
+    margin-right: 20px;
 }
 
 .message-top {
@@ -311,6 +319,8 @@ body {
 
 .message-time {
     align-self: flex-end;
+    font-size: 10px;
+    color: var(--text-dark-grey);
 }
 
 
@@ -339,6 +349,10 @@ body {
     padding: 0px 15px;
 }
 
+.message-menu {
+    color: var(--icon-grey);
+}
+
 
 /*******************
     RESPONSIVE CHAT
@@ -356,7 +370,12 @@ body {
     .chat-write {
         padding: 10px 0px;
     }
+    .chat-main {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
 }
+
 
 
 
