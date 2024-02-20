@@ -168,6 +168,7 @@ body {
     border: none;
     flex-grow: 1;
     line-height: 35px;
+    padding: 0px 15px;
 }
 
 /* Conversations */
@@ -254,6 +255,7 @@ body {
 .chat {
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 /* Chat Nav */
@@ -278,6 +280,7 @@ body {
 .chat-main {
     background-image: url('https://raw.githubusercontent.com/MattiaBologna/html-css-boolzapp/main/img/mine.jpg');
     flex-grow: 1;
+    margin-right: 10px;
 }
 
 
@@ -301,6 +304,9 @@ body {
 .write-message {
     flex-grow: 1;
     border: none;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0px 15px;
 }
 
 
@@ -315,6 +321,10 @@ body {
     .audio-icon,
     .emoji-icon {
         display: block;
+        padding: 0px 30px;
+    }
+    .chat-write {
+        padding: 10px 0px;
     }
 }
 
