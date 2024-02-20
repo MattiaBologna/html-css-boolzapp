@@ -99,6 +99,7 @@ body {
     overflow: hidden;
     display: none;
     flex-direction: column;
+    flex-shrink: 0;
 }
 
 /* Navbar */
@@ -115,6 +116,7 @@ body {
 }
 
 .sidebar-nav {
+    flex-shrink: 0;
     border-right: 1px solid rgba(128, 128, 128, 0.174);
 }
 
@@ -138,6 +140,7 @@ body {
     align-items: center;
     gap: 15px;
     padding: 0 15px;
+    flex-shrink: 0;
 }
 
 .pop-up-icon {
