@@ -95,7 +95,9 @@ body {
 
 .sidebar {
     background-color: var(--darker-white);
-    overflow: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar */
@@ -173,6 +175,8 @@ body {
 .sidebar-conversations {
     background-color: white;
     margin-right: 10px;
+    flex-grow: 1;
+    overflow: auto;
 }
 
 .chat-card {
