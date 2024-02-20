@@ -47,14 +47,14 @@ body {
 
 #app {
     height: 100vh;
-    background-color: var(--light-green);
+    background: rgb(216,219,215);
+    background: linear-gradient(180deg, rgba(77,146,136,1) 180px, rgba(216,219,215,1) 180px);
 }
 
 .app {
     height: 100%;
     width: 100%;
     display: flex;
-    background-color: var(--light-green);
 }
 
 .sidebar {
