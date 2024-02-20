@@ -96,7 +96,7 @@ body {
 .sidebar {
     background-color: var(--darker-white);
     overflow: hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -239,6 +239,12 @@ body {
         display: block;
     }
 
+}
+
+@media (min-width: 576px) {
+    .sidebar {
+        display: flex;
+    }
 }
 
 
