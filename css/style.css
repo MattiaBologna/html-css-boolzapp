@@ -101,11 +101,8 @@ body {
 }
 
 /* Navbar */
-.sidebar-nav {
-    color: var(--icon-grey);
-}
-
-.sidebar-nav {
+.sidebar-nav,
+.chat-nav {
     background-color: var(--light-grey);
     height: 75px;
     display: flex;
@@ -113,6 +110,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 0 15px;
+    color: var(--icon-grey);
 }
 
 .user-profile-img {
@@ -248,6 +246,38 @@ body {
 }
 
 
+/******************
+    CHAT 
+******************/
+
+/* Chat Nav */
+.chat-nav .contact-name {
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.chat-nav-tools {
+    display: none;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.last-access {
+    color: #00000077;
+    font-size: 12px;
+}
+
+
+/*******************
+    RESPONSIVE CHAT
+*******************/
+
+@media (min-width: 576px) {
+    .chat-nav-tools {
+        display: flex;
+    }
+}
 
 
 
