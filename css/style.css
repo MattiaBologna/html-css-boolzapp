@@ -165,18 +165,31 @@ body {
     display: none;
     background-color: var(--white);
     margin: 7px;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
     color: var(--icon-grey);
     padding-left: 15px;
+    position: relative;
 }
 
 .input-search {
     border: none;
     flex-grow: 1;
     line-height: 35px;
-    padding: 0px 15px;
+    padding: 0px 15px 0px 50px;
+    outline: none;
 }
+
+.input-search + i,
+.input-search + i + i {
+    position: absolute;
+    pointer-events: none;
+}
+
+.input-search + i + i {
+    opacity: 0;
+}
+
 
 /* Conversations */
 .sidebar-conversations {
@@ -354,6 +367,7 @@ body {
     line-height: 50px;
     border-radius: 5px;
     padding: 0px 15px;
+    outline: none;
 }
 
 .message-menu {
@@ -498,6 +512,46 @@ body {
     }
 }
 
+/* Sidebar input search */
+
+.sidebar-search input:focus-visible + i {
+    opacity: 0;
+    animation: rotateFadeOut 1s ease;
+}
+
+@keyframes rotateFadeOut {
+    0%{
+        transform: rotateZ('0deg');
+        opacity: 1;
+    }
+    80%{
+        transform: rotateZ('360deg');
+        opacity: 0;
+    }
+}
+
+.sidebar-search input:focus-visible + i + i{
+    opacity: 1;
+    animation: rotateFadeIn 1s ease;
+}
+
+@keyframes rotateFadeIn {
+    0%{
+        transform: rotateZ('0deg');
+        opacity: 0;
+    }
+    20%{
+        transform: rotateZ('0deg');
+        opacity: 0;
+    }
+    100%{
+        transform: rotateZ('360deg');
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+
 
 
 
@@ -523,3 +577,4 @@ body {
     background-color: grey;
     height: 100%;
 }
+
