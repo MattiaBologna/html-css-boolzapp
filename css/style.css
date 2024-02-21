@@ -276,6 +276,9 @@ body {
         opacity: 1;
         animation: slideInLeft 0.2s ease;
     }
+    .message:hover .emoji-react {
+        display: block;
+    }
 }
 
 @media (min-width: 576px) {
@@ -297,7 +300,7 @@ body {
 
 /* Chat Nav */
 .chat-nav {
-    flex-shrink: 1;
+    flex-shrink: 0;
 }
 
 .chat-nav .contact-name {
@@ -341,13 +344,13 @@ body {
 .message.mine {
     align-self: flex-end;
     background-color: #DEF8C0;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .message.others {
     align-self: flex-start;
     background-color: white;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .message-top {
@@ -578,6 +581,34 @@ body {
         opacity: 1;
     }
 }
+
+/* EMOJI REACT */
+
+.message.mine,
+.message.others {
+    position: relative;
+}
+
+.mine .emoji-react {
+    left: -1.5em;
+    padding-right: 15px;
+}
+
+.others .emoji-react {
+    right: -1.5em;
+    padding-left: 15px;
+}
+
+.emoji-react {
+    display: none;
+    position: absolute;
+    color: hsl(0, 0%, 99%);
+    font-size: 15px;
+    animation: rotateFadeIn 0.3s;   
+}
+
+
+
 
 
 
