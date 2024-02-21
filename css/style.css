@@ -244,6 +244,8 @@ body {
 }
 
 
+
+
 /***********************
     RESPONSIVE SIDE BAR 
 ***********************/
@@ -402,7 +404,40 @@ body {
     FEATURES 
 ******************/
 
-/* MESSAGE DROP DOWN MENU */
+/* CHAT DROPDOWN MENU */
+
+.chat-card {
+    position: relative;
+}
+
+.sidebar-chat-menu {
+    position: absolute;
+    color: var(--icon-grey);
+    right: 15px;
+    bottom: 15px;
+    padding: 10px 10px 0px;
+}
+
+.sidebar-chat-menu i {
+    opacity: 0;
+}
+
+.chat-card:hover .sidebar-chat-menu i {
+    opacity: 1;
+    animation: slideInLeft 0.2s ease;
+}
+
+.sidebar-chat-menu:hover .chat-dropdown-menu {
+    display: flex;
+    right: 1em;
+    z-index: 1;
+}
+
+.chat-dropdown-menu {
+    min-width: 150px;
+}
+
+/* MESSAGE DROPDOWN MENU */
 
 .message-menu i {
     opacity: 0;
@@ -413,7 +448,8 @@ body {
     animation: slideInLeft 0.2s ease;
 }
 
-.message-dropdown-menu {
+.message-dropdown-menu,
+.chat-dropdown-menu {
     position: absolute;
     display: none;
     background-color: white;
@@ -423,7 +459,8 @@ body {
     border-radius: 5px;
 }
 
-.message-dropdown-menu li {
+.message-dropdown-menu li,
+.chat-dropdown-menu li {
     padding: 5px 10px;
 }
 
@@ -431,7 +468,9 @@ body {
     display: flex;   
 }
 
-.message-dropdown-menu li:hover {
+.message-dropdown-menu li:hover,
+.chat-dropdown-menu li:hover
+ {
     background-color: rgb(228, 228, 228);
     animation: cardBgSmoothTransition 0.2s ease;
 }
@@ -516,40 +555,36 @@ body {
 
 .sidebar-search input:focus-visible + i {
     opacity: 0;
-    animation: rotateFadeOut 1s ease;
+    animation: rotateFadeOut 0.5s ease;
 }
 
 @keyframes rotateFadeOut {
     0%{
-        transform: rotateZ('0deg');
         opacity: 1;
     }
-    80%{
-        transform: rotateZ('360deg');
+    60%{
         opacity: 0;
     }
 }
 
 .sidebar-search input:focus-visible + i + i{
     opacity: 1;
-    animation: rotateFadeIn 1s ease;
+    animation: rotateFadeIn 0.5s ease;
 }
 
 @keyframes rotateFadeIn {
     0%{
-        transform: rotateZ('0deg');
         opacity: 0;
     }
-    20%{
-        transform: rotateZ('0deg');
+    40%{
         opacity: 0;
     }
     100%{
-        transform: rotateZ('360deg');
         opacity: 1;
-        pointer-events: all;
     }
 }
+
+
 
 
 
