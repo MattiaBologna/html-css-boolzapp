@@ -459,6 +459,11 @@ body {
     flex-direction: column;
     gap: 5px;
     border-radius: 5px;
+    right: 1em;
+}
+
+.message-dropdown-menu {
+    z-index: 1;
 }
 
 .message-dropdown-menu li,
